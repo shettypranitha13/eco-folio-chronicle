@@ -37,7 +37,7 @@ export function ProfilePhoto({ className = "" }: Props) {
     <div className={`flex flex-col items-center gap-3 ${className}`}>
       <div className="glass relative grid h-56 w-56 place-items-center overflow-hidden rounded-full sm:h-72 sm:w-72">
         {photo ? (
-          <img src={photo} alt={profile.name} className="h-full w-full object-cover" />
+          <img src={photo} alt={profile.name} className="h-full w-full object-cover object-top" />
         ) : (
           <div className="text-muted-foreground p-6 text-center">
             <User size={44} className="mx-auto" />

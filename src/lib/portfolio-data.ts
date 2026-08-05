@@ -3,6 +3,8 @@
 // Replace the values below with your own details, assignments and text.
 // ---------------------------------------------------------------------------
 
+import photoAsset from "@/assets/pranitha.jpeg.asset.json";
+
 export const profile = {
   name: "Pranitha Shetty",
   className: "TE",
@@ -11,7 +13,7 @@ export const profile = {
   college: "Vidyalankar Institute Of Technology",
   semester: "SEMESTER 5",
   email: "shettypranitha13@gmail.com",
-  photo: "", // put an image URL or import path here
+  photo: photoAsset.url, // default profile photo (uploads override it locally)
   skills: [
     "Field Survey",
     "Data Analysis",

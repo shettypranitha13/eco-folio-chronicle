@@ -13,7 +13,7 @@ export const profile = {
   college: "Vidyalankar Institute Of Technology",
   semester: "SEMESTER 5",
   email: "shettypranitha13@gmail.com",
-  photo: "", // put an image URL or import path here
+  photo: photoAsset.url, // default profile photo (uploads override it locally)
   skills: [
     "Field Survey",
     "Data Analysis",

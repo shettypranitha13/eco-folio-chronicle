@@ -3,7 +3,8 @@
 // Replace the values below with your own details, assignments and text.
 // ---------------------------------------------------------------------------
 
-import photoAsset from "@/assets/pranitha.jpeg.asset.json";
+// Bundled with the app so it works on any host (Lovable, Vercel, etc.)
+import photoUrl from "@/assets/pranitha.jpeg";
 
 export const profile = {
   name: "Pranitha Shetty",

@@ -110,20 +110,7 @@ function Index() {
                 style={{ background: "var(--gradient-eco)", opacity: 0.25 }}
                 aria-hidden
               />
-              <div className="glass relative grid h-56 w-56 place-items-center overflow-hidden rounded-full sm:h-72 sm:w-72">
-                {profile.photo ? (
-                  <img
-                    src={profile.photo}
-                    alt={profile.name}
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <div className="text-muted-foreground p-6 text-center">
-                    <User size={44} className="mx-auto" />
-                    <p className="mt-2 text-xs">[ Profile Photo Placeholder ]</p>
-                  </div>
-                )}
-              </div>
+              <ProfilePhoto />
             </div>
           </motion.div>
         </div>

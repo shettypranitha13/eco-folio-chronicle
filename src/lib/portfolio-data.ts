@@ -14,7 +14,7 @@ export const profile = {
   college: "Vidyalankar Institute Of Technology",
   semester: "SEMESTER 5",
   email: "shettypranitha13@gmail.com",
-  photo: photoAsset.url, // default profile photo (uploads override it locally)
+  photo: photoUrl, // default profile photo (uploads override it locally)
   skills: [
     "Field Survey",
     "Data Analysis",

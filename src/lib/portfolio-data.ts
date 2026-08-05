@@ -3,7 +3,8 @@
 // Replace the values below with your own details, assignments and text.
 // ---------------------------------------------------------------------------
 
-import photoAsset from "@/assets/pranitha.jpeg.asset.json";
+// Bundled with the app so it works on any host (Lovable, Vercel, etc.)
+import photoUrl from "@/assets/pranitha.jpeg";
 
 export const profile = {
   name: "Pranitha Shetty",
@@ -13,7 +14,7 @@ export const profile = {
   college: "Vidyalankar Institute Of Technology",
   semester: "SEMESTER 5",
   email: "shettypranitha13@gmail.com",
-  photo: photoAsset.url, // default profile photo (uploads override it locally)
+  photo: photoUrl, // default profile photo (uploads override it locally)
   skills: [
     "Field Survey",
     "Data Analysis",

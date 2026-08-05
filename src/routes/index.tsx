@@ -4,6 +4,7 @@ import { ArrowRight, GraduationCap, Hash, IdCard, Landmark, Sprout, User } from 
 import heroImage from "@/assets/hero-nature.jpg";
 import { FloatingLeaves } from "@/components/FloatingLeaves";
 import { Reveal } from "@/components/Reveal";
+import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { profile } from "@/lib/portfolio-data";
 
 export const Route = createFileRoute("/")({

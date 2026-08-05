@@ -4,11 +4,11 @@
 // ---------------------------------------------------------------------------
 
 export const profile = {
-  name: "[Your Name]",
-  className: "[Your Class]",
-  rollNumber: "[Roll Number]",
-  department: "[Department]",
-  college: "[College Name]",
+  name: "Pranitha Shetty",
+  className: "TE",
+  rollNumber: "24101B0027",
+  department: "INFT",
+  college: "Vidyalankar Institute Of Technology",
   semester: "[Semester]",
   email: "[your.email@example.com]",
   photo: "", // put an image URL or import path here

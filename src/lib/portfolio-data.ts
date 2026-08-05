@@ -9,8 +9,8 @@ export const profile = {
   rollNumber: "24101B0027",
   department: "INFT",
   college: "Vidyalankar Institute Of Technology",
-  semester: "[Semester]",
-  email: "[your.email@example.com]",
+  semester: "SEMESTER 5",
+  email: "shettypranitha13@gmail.com",
   photo: "", // put an image URL or import path here
   skills: [
     "Field Survey",

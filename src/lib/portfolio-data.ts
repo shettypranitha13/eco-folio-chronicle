@@ -3,6 +3,8 @@
 // Replace the values below with your own details, assignments and text.
 // ---------------------------------------------------------------------------
 
+import photoAsset from "@/assets/pranitha.jpeg.asset.json";
+
 export const profile = {
   name: "Pranitha Shetty",
   className: "TE",

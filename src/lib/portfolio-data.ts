@@ -30,7 +30,7 @@ export const profile = {
 };
 
 export const aboutText =
-  "[Write about yourself here — your background, why Environmental Studies matters to you, what you have learned during the course, and how you plan to apply this knowledge in your academic and professional journey.]";
+  "Hi my name is pranita";
 
 export const reflectionText =
   "[Write your learning reflection here — describe how this course changed the way you see the environment, the activities you enjoyed most, the challenges you faced, and the habits you have adopted for a more sustainable lifestyle.]";

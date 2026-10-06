@@ -63,9 +63,18 @@ export const assignments = [
     viewUrl: "/quiz.jpg",
     pdfUrl: "/quiz.jpg",
   },
-  ...Array.from({ length: 9 }, (_, i) => ({
-    id: i + 4,
-    title: `[Assignment ${i + 4} Title]`,
+  {
+    id: 4,
+    title: "C - Footprint Calculator",
+    description:
+      "A carbon footprint calculation activity measuring individual carbon emissions from daily habits and identifying ways to reduce them.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/c-footprint.pdf",
+    pdfUrl: "/c-footprint.pdf",
+  },
+  ...Array.from({ length: 8 }, (_, i) => ({
+    id: i + 5,
+    title: `[Assignment ${i + 5} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

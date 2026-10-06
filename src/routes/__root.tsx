@@ -37,15 +37,15 @@ function NotFoundComponent() {
   );
 }
 
-  function ErrorComponent({
-    error,
-    reset,
-  }: {
-    error: Error;
-    info?: { componentStack: string };
-    reset: () => void;
-  }) {
-    console.error(error);
+function ErrorComponent({
+  error,
+  reset,
+}: {
+  error: Error;
+  info?: { componentStack: string };
+  reset: () => void;
+}) {
+  console.error(error);
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });

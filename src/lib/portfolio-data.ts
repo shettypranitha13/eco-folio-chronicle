@@ -54,9 +54,18 @@ export const assignments = [
     viewUrl: "/crossword.pdf",
     pdfUrl: "/crossword.pdf",
   },
-  ...Array.from({ length: 10 }, (_, i) => ({
-    id: i + 3,
-    title: `[Assignment ${i + 3} Title]`,
+  {
+    id: 3,
+    title: "Quiz",
+    description:
+      "An online quiz on 'Recycling of E-waste' with 10 questions covering e-waste hazards, recycling processes and responsible disposal — scored 100% in the live attempt.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/quiz.jpg",
+    pdfUrl: "/quiz.jpg",
+  },
+  ...Array.from({ length: 9 }, (_, i) => ({
+    id: i + 4,
+    title: `[Assignment ${i + 4} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

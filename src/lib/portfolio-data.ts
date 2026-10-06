@@ -35,14 +35,25 @@ export const aboutText =
 export const reflectionText =
   "[Write your learning reflection here — describe how this course changed the way you see the environment, the activities you enjoyed most, the challenges you faced, and the habits you have adopted for a more sustainable lifestyle.]";
 
-export const assignments = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  title: `[Assignment ${i + 1} Title]`,
-  description: "[Short description of the assignment, its objective and scope.]",
-  date: "[DD Month YYYY]",
-  viewUrl: "#",
-  pdfUrl: "#",
-}));
+export const assignments = [
+  {
+    id: 1,
+    title: "Pledge",
+    description:
+      "An environmental pledge taken as part of the Environmental Studies course, committing to sustainable habits and responsible use of resources.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/pledge.pdf",
+    pdfUrl: "/pledge.pdf",
+  },
+  ...Array.from({ length: 11 }, (_, i) => ({
+    id: i + 2,
+    title: `[Assignment ${i + 2} Title]`,
+    description: "[Short description of the assignment, its objective and scope.]",
+    date: "[DD Month YYYY]",
+    viewUrl: "#",
+    pdfUrl: "#",
+  })),
+];
 
 export const stats = [
   { label: "Total Assignments", value: 12, suffix: "" },

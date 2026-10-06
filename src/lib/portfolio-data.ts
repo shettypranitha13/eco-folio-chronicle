@@ -45,9 +45,18 @@ export const assignments = [
     viewUrl: "/pledge.pdf",
     pdfUrl: "/pledge.pdf",
   },
-  ...Array.from({ length: 11 }, (_, i) => ({
-    id: i + 2,
-    title: `[Assignment ${i + 2} Title]`,
+  {
+    id: 2,
+    title: "Crossword",
+    description:
+      "An E-Waste themed crossword activity exploring electronic waste, its hazards and responsible disposal practices.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/crossword.pdf",
+    pdfUrl: "/crossword.pdf",
+  },
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: i + 3,
+    title: `[Assignment ${i + 3} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

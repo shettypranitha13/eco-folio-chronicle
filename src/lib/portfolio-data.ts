@@ -35,7 +35,23 @@ export const aboutText =
 export const reflectionText =
   "[Write your learning reflection here — describe how this course changed the way you see the environment, the activities you enjoyed most, the challenges you faced, and the habits you have adopted for a more sustainable lifestyle.]";
 
-export const assignments = [
+export type AssignmentFile = {
+  label: string;
+  url: string;
+  kind: "view" | "download";
+};
+
+export type Assignment = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  viewUrl: string;
+  pdfUrl: string;
+  files?: AssignmentFile[];
+};
+
+export const assignments: Assignment[] = [
   {
     id: 1,
     title: "Pledge",
@@ -90,9 +106,23 @@ export const assignments = [
     viewUrl: "/device-anatomy.pdf",
     pdfUrl: "/device-anatomy.pdf",
   },
-  ...Array.from({ length: 6 }, (_, i) => ({
-    id: i + 7,
-    title: `[Assignment ${i + 7} Title]`,
+  {
+    id: 7,
+    title: "Data Analysis",
+    description:
+      "A data analysis of India's waste and recycling landscape using an 850-row dataset of Indian cities and districts — waste types and quantities, recycling rates, disposal methods, management costs and landfill capacity — explored in a Jupyter notebook and presented as an interactive dashboard.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/data-analysis-dashboard.html",
+    pdfUrl: "/waste-management-data.csv",
+    files: [
+      { label: "Dashboard", url: "/data-analysis-dashboard.html", kind: "view" },
+      { label: "Notebook", url: "/data-analysis-notebook.ipynb", kind: "download" },
+      { label: "Dataset", url: "/waste-management-data.csv", kind: "download" },
+    ],
+  },
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: i + 8,
+    title: `[Assignment ${i + 8} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

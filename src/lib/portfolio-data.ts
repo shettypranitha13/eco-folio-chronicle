@@ -35,7 +35,23 @@ export const aboutText =
 export const reflectionText =
   "[Write your learning reflection here — describe how this course changed the way you see the environment, the activities you enjoyed most, the challenges you faced, and the habits you have adopted for a more sustainable lifestyle.]";
 
-export const assignments = [
+export type AssignmentFile = {
+  label: string;
+  url: string;
+  kind: "view" | "download";
+};
+
+export type Assignment = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  viewUrl: string;
+  pdfUrl: string;
+  files?: AssignmentFile[];
+};
+
+export const assignments: Assignment[] = [
   {
     id: 1,
     title: "Pledge",

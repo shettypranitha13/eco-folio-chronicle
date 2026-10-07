@@ -49,7 +49,7 @@ const cards = [
   {
     icon: Mountain,
     title: "Environmental Values",
-    text: "[Write the values you stand for — conservation, responsible consumption, respect for biodiversity and climate justice.]",
+    text: "I believe in protecting nature through responsible choices and sustainable practices. I value reducing waste, reusing resources, recycling responsibly, and conserving energy. I strongly support e-waste awareness and proper disposal of electronic products. By encouraging environmentally conscious habits, I aim to inspire others to contribute towards a cleaner, greener, and healthier planet.",
   },
   {
     icon: Palette,

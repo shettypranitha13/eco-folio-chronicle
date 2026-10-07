@@ -121,6 +121,14 @@ export const assignments: Assignment[] = [
     ],
   },
   {
+    id: 8,
+    title: "[Assignment 8 Title]",
+    description: "[Short description of the assignment, its objective and scope.]",
+    date: "[DD Month YYYY]",
+    viewUrl: "#",
+    pdfUrl: "#",
+  },
+  {
     id: 9,
     title: "Green Hackathon",
     description:

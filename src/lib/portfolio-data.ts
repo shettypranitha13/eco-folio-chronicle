@@ -90,9 +90,23 @@ export const assignments = [
     viewUrl: "/device-anatomy.pdf",
     pdfUrl: "/device-anatomy.pdf",
   },
-  ...Array.from({ length: 6 }, (_, i) => ({
-    id: i + 7,
-    title: `[Assignment ${i + 7} Title]`,
+  {
+    id: 7,
+    title: "Data Analysis",
+    description:
+      "A data analysis of India's waste and recycling landscape using an 850-row dataset of Indian cities and districts — waste types and quantities, recycling rates, disposal methods, management costs and landfill capacity — explored in a Jupyter notebook and presented as an interactive dashboard.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/data-analysis-dashboard.html",
+    pdfUrl: "/waste-management-data.csv",
+    files: [
+      { label: "Dashboard", url: "/data-analysis-dashboard.html", kind: "view" },
+      { label: "Notebook", url: "/data-analysis-notebook.ipynb", kind: "download" },
+      { label: "Dataset", url: "/waste-management-data.csv", kind: "download" },
+    ],
+  },
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: i + 8,
+    title: `[Assignment ${i + 8} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

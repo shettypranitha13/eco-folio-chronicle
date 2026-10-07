@@ -3,7 +3,11 @@ import { CalendarDays, Download, Eye } from "lucide-react";
 import placeholderImg from "@/assets/assignment-placeholder.jpg";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
-import { assignments } from "@/lib/portfolio-data";
+import {
+  assignments,
+  type Assignment,
+  type AssignmentFile,
+} from "@/lib/portfolio-data";
 
 export const Route = createFileRoute("/assignments")({
   head: () => ({
@@ -23,6 +27,15 @@ export const Route = createFileRoute("/assignments")({
   }),
   component: Assignments,
 });
+
+function filesFor(a: Assignment): AssignmentFile[] {
+  return (
+    a.files ?? [
+      { label: "View", url: a.viewUrl, kind: "view" as const },
+      { label: "PDF", url: a.pdfUrl, kind: "download" as const },
+    ]
+  );
+}
 
 function Assignments() {
   return (
@@ -59,19 +72,23 @@ function Assignments() {
                   <p className="text-muted-foreground mt-4 flex items-center gap-2 text-xs">
                     <CalendarDays size={14} /> Submitted: {a.date}
                   </p>
-                  <div className="mt-4 flex gap-2">
-                    <a
-                      href={a.viewUrl}
-                      className="bg-primary text-primary-foreground inline-flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-90"
-                    >
-                      <Eye size={14} /> View
-                    </a>
-                    <a
-                      href={a.pdfUrl}
-                      className="border-border hover:bg-secondary inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border px-3 py-2 text-xs font-semibold transition-colors"
-                    >
-                      <Download size={14} /> PDF
-                    </a>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {filesFor(a).map((f) => (
+                      <a
+                        key={f.url + f.label}
+                        href={f.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={
+                          f.kind === "view"
+                            ? "bg-primary text-primary-foreground inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-90"
+                            : "border-border hover:bg-secondary inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border px-3 py-2 text-xs font-semibold transition-colors"
+                        }
+                      >
+                        {f.kind === "view" ? <Eye size={14} /> : <Download size={14} />}
+                        {f.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </article>

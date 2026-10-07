@@ -44,7 +44,7 @@ const cards = [
   {
     icon: Target,
     title: "Career Goals",
-    text: "[Write your career goals here — e.g. becoming an environmental analyst, working in renewable energy or pursuing higher studies in sustainability.]",
+    text: "My career goal is to build a successful career in the technology field while using my skills to create meaningful solutions for society and the environment. I aspire to continuously learn, develop innovative ideas, and contribute to sustainable technology. I aim to grow professionally while making a positive impact on the world.",
   },
   {
     icon: Mountain,

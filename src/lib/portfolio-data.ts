@@ -30,7 +30,7 @@ export const profile = {
 };
 
 export const aboutText =
-  "\n";
+  "I am a passionate and socially responsible student who believes that small actions can create a meaningful impact on our environment. With a strong interest in technology and sustainability, I am committed to spreading awareness about the responsible use, collection, recycling, and disposal of electronic waste. Through this E-Waste initiative, I aim to educate people about the harmful effects of improper e-waste disposal and encourage sustainable habits. I believe that by combining technology, awareness, and responsible action, we can reduce e-waste pollution and contribute towards a cleaner, greener, and healthier future.";
 
 export const reflectionText =
   "[Write your learning reflection here — describe how this course changed the way you see the environment, the activities you enjoyed most, the challenges you faced, and the habits you have adopted for a more sustainable lifestyle.]";

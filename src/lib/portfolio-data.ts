@@ -30,7 +30,7 @@ export const profile = {
 };
 
 export const aboutText =
-  "Hi my name is pranita";
+  "\n";
 
 export const reflectionText =
   "[Write your learning reflection here — describe how this course changed the way you see the environment, the activities you enjoyed most, the challenges you faced, and the habits you have adopted for a more sustainable lifestyle.]";

@@ -39,7 +39,7 @@ const cards = [
   {
     icon: Compass,
     title: "My Interests",
-    text: "[Write your interests here — e.g. field ecology, climate policy, wildlife photography, community clean-up drives.]",
+    text: "I am passionate about technology, creativity, and environmental sustainability. I enjoy coding, designing, painting, and exploring innovative ideas that create positive social impact. I am particularly interested in e-waste awareness and sustainable practices, as I believe technology should not only make life easier but also contribute towards a cleaner and greener future.",
   },
   {
     icon: Target,

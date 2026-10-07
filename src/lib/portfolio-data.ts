@@ -81,9 +81,18 @@ export const assignments = [
     viewUrl: "/video-task.jpg",
     pdfUrl: "/video-task.jpg",
   },
-  ...Array.from({ length: 7 }, (_, i) => ({
-    id: i + 6,
-    title: `[Assignment ${i + 6} Title]`,
+  {
+    id: 6,
+    title: "Device Anatomy",
+    description:
+      "A group engineering investigation (Group 11) of a non-functional DVD player at end-of-life — device profile, why it became e-waste, its internal components and material choices, and responsible disposal, prepared for the E-Waste & Environmental Management activity.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/device-anatomy.pdf",
+    pdfUrl: "/device-anatomy.pdf",
+  },
+  ...Array.from({ length: 6 }, (_, i) => ({
+    id: i + 7,
+    title: `[Assignment ${i + 7} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

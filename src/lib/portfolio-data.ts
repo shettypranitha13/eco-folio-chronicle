@@ -72,9 +72,18 @@ export const assignments = [
     viewUrl: "/c-footprint.pdf",
     pdfUrl: "/c-footprint.pdf",
   },
-  ...Array.from({ length: 8 }, (_, i) => ({
-    id: i + 5,
-    title: `[Assignment ${i + 5} Title]`,
+  {
+    id: 5,
+    title: "Video Task",
+    description:
+      "A video-based assignment for the Environmental Studies course, submitted as part of the course activities.",
+    date: "[DD Month YYYY]",
+    viewUrl: "/video-task.jpg",
+    pdfUrl: "/video-task.jpg",
+  },
+  ...Array.from({ length: 7 }, (_, i) => ({
+    id: i + 6,
+    title: `[Assignment ${i + 6} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

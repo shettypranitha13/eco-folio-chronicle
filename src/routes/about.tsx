@@ -54,7 +54,7 @@ const cards = [
   {
     icon: Palette,
     title: "Hobbies",
-    text: "[Write your hobbies here — e.g. gardening, trekking, sketching nature, reading and cycling.]",
+    text: "My hobbies reflect my creative and active personality. I enjoy painting, designing creative content, coding, and playing badminton. Painting allows me to express my imagination, while coding challenges me to think logically and creatively. I also enjoy exploring new ideas, learning skills, and participating in activities that encourage teamwork and social responsibility.",
   },
 ];
 

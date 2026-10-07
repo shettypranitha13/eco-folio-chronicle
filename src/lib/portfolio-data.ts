@@ -120,9 +120,21 @@ export const assignments: Assignment[] = [
       { label: "Dataset", url: "/waste-management-data.csv", kind: "download" },
     ],
   },
-  ...Array.from({ length: 5 }, (_, i) => ({
-    id: i + 8,
-    title: `[Assignment ${i + 8} Title]`,
+  {
+    id: 9,
+    title: "Green Hackathon",
+    description:
+      "A hackathon project — EcoValuate AI, a web application built for the Green Hackathon, hosted live online.",
+    date: "[DD Month YYYY]",
+    viewUrl: "https://eco-valuate-ai-1.onrender.com/",
+    pdfUrl: "https://eco-valuate-ai-1.onrender.com/",
+    files: [
+      { label: "View Project", url: "https://eco-valuate-ai-1.onrender.com/", kind: "view" },
+    ],
+  },
+  ...Array.from({ length: 3 }, (_, i) => ({
+    id: i + 10,
+    title: `[Assignment ${i + 10} Title]`,
     description: "[Short description of the assignment, its objective and scope.]",
     date: "[DD Month YYYY]",
     viewUrl: "#",

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CalendarDays, Download, Eye } from "lucide-react";
-import placeholderImg from "@/assets/assignment-placeholder.jpg";
+import { AssignmentPreview } from "@/components/AssignmentPreview";
+import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import {
@@ -23,6 +24,8 @@ export const Route = createFileRoute("/assignments")({
         property: "og:description",
         content: "Twelve documented Environmental Studies assignments and submissions.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Assignments,
@@ -52,14 +55,7 @@ function Assignments() {
             <Reveal key={a.id} delay={(i % 3) * 0.08}>
               <article className="glass lift flex h-full flex-col overflow-hidden rounded-3xl">
                 <div className="bg-secondary relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={placeholderImg}
-                    alt={`Placeholder illustration for assignment ${a.id}`}
-                    loading="lazy"
-                    width={1024}
-                    height={640}
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
+                  <AssignmentPreview assignment={a} />
                   <span className="bg-primary text-primary-foreground absolute top-3 left-3 rounded-full px-3 py-1 text-[11px] font-semibold">
                     Assignment {a.id}
                   </span>
@@ -74,20 +70,22 @@ function Assignments() {
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {filesFor(a).map((f) => (
-                      <a
+                      <Button
+                        asChild
                         key={f.url + f.label}
+                        variant={f.kind === "view" ? "default" : "outline"}
+                        size="sm"
+                        className="min-w-0 flex-1 gap-1.5 rounded-full"
+                      >
+                      <a
                         href={f.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={
-                          f.kind === "view"
-                            ? "bg-primary text-primary-foreground inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-90"
-                            : "border-border hover:bg-secondary inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border px-3 py-2 text-xs font-semibold transition-colors"
-                        }
                       >
                         {f.kind === "view" ? <Eye size={14} /> : <Download size={14} />}
                         {f.label}
                       </a>
+                      </Button>
                     ))}
                   </div>
                 </div>

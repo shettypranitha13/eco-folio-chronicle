@@ -17,7 +17,7 @@ function DocumentPreview({ url, title }: { url: string; title: string }) {
         const pdfjs = await import("pdfjs-dist");
         if (cancelled) return;
         pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
-        const task = pdfjs.getDocument(url);
+        const task = pdfjs.getDocument({ url });
         cleanup = () => { void task.destroy(); };
         const document = await task.promise;
         const page = await document.getPage(1);

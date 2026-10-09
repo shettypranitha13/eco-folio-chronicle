@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FileText, LoaderCircle } from "lucide-react";
-import pdfWorkerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+import pdfWorkerUrl from "pdfjs-dist/legacy/build/pdf.worker.min.mjs?url";
 import type { Assignment } from "@/lib/portfolio-data";
 
 function DocumentPreview({ url, title }: { url: string; title: string }) {
@@ -14,7 +14,7 @@ function DocumentPreview({ url, title }: { url: string; title: string }) {
 
     async function renderPage() {
       try {
-        const pdfjs = await import("pdfjs-dist");
+        const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
         if (cancelled) return;
         pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
         const task = pdfjs.getDocument({ url });

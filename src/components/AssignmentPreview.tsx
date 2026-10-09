@@ -28,8 +28,11 @@ function DocumentPreview({ url, title }: { url: string; title: string }) {
         canvas.height = viewport.height;
         await page.render({ canvas, viewport }).promise;
         if (!cancelled) setStatus("ready");
-      } catch {
-        if (!cancelled) setStatus("error");
+      } catch (error) {
+        if (!cancelled) {
+          console.error("Assignment PDF preview failed", error);
+          setStatus("error");
+        }
       }
     }
 

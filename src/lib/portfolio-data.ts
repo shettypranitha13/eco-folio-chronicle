@@ -122,11 +122,17 @@ export const assignments: Assignment[] = [
   },
   {
     id: 8,
-    title: "[Assignment 8 Title]",
-    description: "[Short description of the assignment, its objective and scope.]",
-    date: "[DD Month YYYY]",
-    viewUrl: "#",
-    pdfUrl: "#",
+    title: "Awareness Campaign",
+    description:
+      "EcoCycle 2026 — an E-Waste Awareness Campaign ('Give Your Gadgets a Responsible Goodbye') launched on 14 October 2026 with a team of eight: an interactive dashboard with a sorting challenge and quiz, awareness reels and QR-coded posters shared via Instagram (@gadgets2green), and a public opinion survey (78 responses, 49 E-Waste Champion certificates issued).",
+    date: "14 October 2026",
+    viewUrl: "/eco-cycle-report.pdf",
+    pdfUrl: "/eco-cycle-report.pdf",
+    files: [
+      { label: "Report", url: "/eco-cycle-report.pdf", kind: "view" },
+      { label: "Dashboard", url: "https://ecocycle-2026.netlify.app/", kind: "view" },
+      { label: "PDF", url: "/eco-cycle-report.pdf", kind: "download" },
+    ],
   },
   {
     id: 9,
